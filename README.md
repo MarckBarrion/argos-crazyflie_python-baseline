@@ -7,6 +7,11 @@ To use and view the original gitlab repository: **https://gitlab.uni.lu/adars/cr
 
 This was developed in order to easily link the ARGoS-Crazyflie Python Wrapper with additional sensors and actuators developed by **Marck Herzon Barrion.**
 
+# New Additions:
+1. Proximity Sensor (Multi-ranger Deck)
+2. Ground Sensor (IR-based sensor)
+
+
 # Compiling the code
 
 Make sure you have ARGoS >= 3.0.0-beta52 installed!
