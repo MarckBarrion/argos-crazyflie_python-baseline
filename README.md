@@ -54,6 +54,8 @@ make
 ```
 # Running Examples
 
+To run the examples, go to the /examples directory of the project and run any of the codes below.
+
 1. Proximity Sensor
 
 ```shell
