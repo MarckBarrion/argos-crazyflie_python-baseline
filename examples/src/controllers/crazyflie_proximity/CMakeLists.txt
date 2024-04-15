@@ -1,0 +1,6 @@
+add_library(crazyflie_proximity MODULE crazyflie_proximity.h crazyflie_proximity.cpp)
+target_link_libraries(crazyflie_proximity
+  argos3core_simulator
+  argos3plugin_simulator_crazyflie
+  argos3plugin_simulator_genericrobot)
+

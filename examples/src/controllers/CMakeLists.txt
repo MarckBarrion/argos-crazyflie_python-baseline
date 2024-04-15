@@ -1,0 +1,6 @@
+add_subdirectory(crazyflie_battery)
+add_subdirectory(crazyflie_camera)
+add_subdirectory(crazyflie_led)
+add_subdirectory(crazyflie_position)
+add_subdirectory(crazyflie_speed)
+add_subdirectory(crazyflie_proximity)
