@@ -5,7 +5,7 @@ This serves as a pre-requisite repository and installation for the ARGoS-Crazyfl
 Please **cite the works of Stolfi and Danoy** using this paper: **https://arxiv.org/abs/2401.16948**
 To use and view the original gitlab repository: **https://gitlab.uni.lu/adars/crazyflie**
 
-This was developed in order to easily link the ARGoS-Crazyflie Python Wrapper with additional sensors and actuators developed by Marck Herzon Barrion.
+This was developed in order to easily link the ARGoS-Crazyflie Python Wrapper with additional sensors and actuators developed by **Marck Herzon Barrion.**
 
 # Compiling the code
 
