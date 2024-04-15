@@ -16,6 +16,8 @@ This was developed in order to easily link the ARGoS-Crazyflie Python Wrapper wi
 
 Make sure you have ARGoS >= 3.0.0-beta52 installed!
 
+1. Proceed to root directory of the project.
+
 Commands:
 
 ```shell
@@ -31,9 +33,55 @@ If ARGoS does not find the new robot, try:
 ```shell
 cmake -DCMAKE_BUILD_TYPE=Release ../src -DCMAKE_INSTALL_PREFIX=/usr/local
 ```
+or alternatively,
+
+```shell
+cmake -DCMAKE_BUILD_TYPE=Release ../src -DCMAKE_INSTALL_PREFIX=/usr
+```
 
 For Debug builds:
 
 ```shell
 cmake -DCMAKE_BUILD_TYPE=Debug
 ```
+2. Go to /examples directory
+   
+```shell
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+```
+# Running Examples
+
+## Example
+
+```shell
+argos3 -c src/experiments/crazyflie_proximity.argos
+```
+
+```shell
+argos3 -c src/experiments/crazyflie_battery.argos
+```
+
+## Example
+```shell
+argos3 -c src/experiments/crazyflie_position.argos
+```
+
+## Example
+```shell
+argos3 -c src/experiments/crazyflie_speed.argos
+```
+
+## Example
+```shell
+argos3 -c src/experiments/crazyflie_led.argos
+```
+
+## Example
+```shell
+argos3 -c src/experiments/crazyflie_lua.argos
+```
+
+
