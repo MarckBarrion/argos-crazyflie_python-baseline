@@ -54,32 +54,33 @@ make
 ```
 # Running Examples
 
-## Example
+1. Proximity Sensor
 
 ```shell
 argos3 -c src/experiments/crazyflie_proximity.argos
 ```
+2. Battery Sensor and Model
 
 ```shell
 argos3 -c src/experiments/crazyflie_battery.argos
 ```
 
-## Example
+3. Position Actuator and Sensor
 ```shell
 argos3 -c src/experiments/crazyflie_position.argos
 ```
 
-## Example
+4. Speed Actuator and Sensor
 ```shell
 argos3 -c src/experiments/crazyflie_speed.argos
 ```
 
-## Example
+5. LED Actuator
 ```shell
 argos3 -c src/experiments/crazyflie_led.argos
 ```
 
-## Example
+6. Crazyflie LUA
 ```shell
 argos3 -c src/experiments/crazyflie_lua.argos
 ```
