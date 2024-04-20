@@ -1,0 +1,6 @@
+add_library(crazyflie_ground MODULE crazyflie_ground.h crazyflie_ground.cpp)
+target_link_libraries(crazyflie_ground
+  argos3core_simulator
+  argos3plugin_simulator_crazyflie
+  argos3plugin_simulator_genericrobot)
+

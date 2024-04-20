@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/herzon/thesis/argos-crazyflie_prereq/examples/build/lib/controllers/crazyflie_led/crazyflie_led_autogen/mocs_compilation.cpp
+
+/home/herzon/thesis/argos-crazyflie_prereq/examples/src/controllers/crazyflie_led/crazyflie_led.cpp
+crazyflie_led.h
+/home/herzon/thesis/argos-crazyflie_prereq/examples/src/controllers/crazyflie_led/crazyflie_led.h
+argos3/core/utility/configuration/argos_configuration.h
+-
+argos3/core/simulator/simulator.h
+-
+argos3/core/simulator/space/space.h
+-
+
+/home/herzon/thesis/argos-crazyflie_prereq/examples/src/controllers/crazyflie_led/crazyflie_led.h
+argos3/core/control_interface/ci_controller.h
+-
+argos3/plugins/robots/generic/control_interface/ci_leds_actuator.h
+-
+

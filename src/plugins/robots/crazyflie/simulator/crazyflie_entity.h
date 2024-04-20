@@ -19,6 +19,7 @@ namespace argos {
    class CCrazyflieCameraEquippedEntity;
    class CCrazyflieBatteryEquippedEntity;
    class CCrazyflieProximityEquippedEntity;
+   class CCrazyflieGroundSensorEquippedEntity;
 }
 
 #include <argos3/core/simulator/entity/composable_entity.h>
@@ -77,20 +78,25 @@ namespace argos {
          return *m_pcProximitySensorEquippedEntity;
       }
 
+      inline CCrazyflieGroundSensorEquippedEntity& GetGroundSensorEquippedEntity() {
+         return *m_pcGroundSensorEquippedEntity;
+      }
+
       virtual std::string GetTypeDescription() const {
          return "crazyflie";
       }
 
    private:
 
-      CControllableEntity*               m_pcControllableEntity;
-      CEmbodiedEntity*                   m_pcEmbodiedEntity;
-      CQuadRotorEntity*                  m_pcQuadRotorEntity;
-      CLEDEquippedEntity*                m_pcLEDEquippedEntity;
-      CRABEquippedEntity*                m_pcRABEquippedEntity;
-      CCrazyflieCameraEquippedEntity*    m_pcPerspectiveCameraEquippedEntity;
-      CCrazyflieBatteryEquippedEntity*   m_pcBatteryEquippedEntity;
-      CCrazyflieProximityEquippedEntity* m_pcProximitySensorEquippedEntity;
+      CControllableEntity*                   m_pcControllableEntity;
+      CEmbodiedEntity*                       m_pcEmbodiedEntity;
+      CQuadRotorEntity*                      m_pcQuadRotorEntity;
+      CLEDEquippedEntity*                    m_pcLEDEquippedEntity;
+      CRABEquippedEntity*                    m_pcRABEquippedEntity;
+      CCrazyflieCameraEquippedEntity*        m_pcPerspectiveCameraEquippedEntity;
+      CCrazyflieBatteryEquippedEntity*       m_pcBatteryEquippedEntity;
+      CCrazyflieProximityEquippedEntity*     m_pcProximitySensorEquippedEntity;
+      CCrazyflieGroundSensorEquippedEntity*  m_pcGroundSensorEquippedEntity;
    };
 
 }

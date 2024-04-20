@@ -11,6 +11,8 @@ if(ARGOS_BUILD_FOR_SIMULATOR)
     simulator/crazyflie_colored_blob_perspective_camera_default_sensor.h
     simulator/crazyflie_proximity_equipped_entity.h
     simulator/crazyflie_proximity_default_sensor.h
+    simulator/crazyflie_ground_equipped_entity.h
+    simulator/crazyflie_ground_rotzonly_sensor.h
     simulator/pointmass3d_crazyflie_model.h)
 endif(ARGOS_BUILD_FOR_SIMULATOR)
 
@@ -28,6 +30,8 @@ if(ARGOS_BUILD_FOR_SIMULATOR)
     simulator/crazyflie_colored_blob_perspective_camera_default_sensor.cpp
     simulator/crazyflie_proximity_equipped_entity.cpp
     simulator/crazyflie_proximity_default_sensor.cpp
+    simulator/crazyflie_ground_equipped_entity.cpp
+    simulator/crazyflie_ground_rotzonly_sensor.cpp
     simulator/pointmass3d_crazyflie_model.cpp)
   # Compile the graphical visualization only if the necessary libraries have been found
   if(ARGOS_QTOPENGL_FOUND)

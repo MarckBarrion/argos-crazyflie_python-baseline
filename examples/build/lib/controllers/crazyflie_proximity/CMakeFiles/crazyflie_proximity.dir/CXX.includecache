@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/herzon/thesis/argos-crazyflie_prereq/examples/build/lib/controllers/crazyflie_proximity/crazyflie_proximity_autogen/mocs_compilation.cpp
+
+/home/herzon/thesis/argos-crazyflie_prereq/examples/src/controllers/crazyflie_proximity/crazyflie_proximity.cpp
+crazyflie_proximity.h
+/home/herzon/thesis/argos-crazyflie_prereq/examples/src/controllers/crazyflie_proximity/crazyflie_proximity.h
+argos3/core/utility/configuration/argos_configuration.h
+-
+argos3/core/simulator/simulator.h
+-
+argos3/core/simulator/space/space.h
+-
+
+/home/herzon/thesis/argos-crazyflie_prereq/examples/src/controllers/crazyflie_proximity/crazyflie_proximity.h
+argos3/core/control_interface/ci_controller.h
+-
+argos3/plugins/robots/generic/control_interface/ci_quadrotor_speed_actuator.h
+-
+argos3/plugins/robots/generic/control_interface/ci_positioning_sensor.h
+-
+argos3/plugins/robots/generic/control_interface/ci_proximity_sensor.h
+-
+

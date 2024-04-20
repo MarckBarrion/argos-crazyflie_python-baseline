@@ -15,9 +15,11 @@
 #include <argos3/plugins/simulator/entities/led_equipped_entity.h>
 #include <argos3/plugins/simulator/entities/quadrotor_entity.h>
 #include <argos3/plugins/simulator/entities/rab_equipped_entity.h>
+#include <argos3/plugins/simulator/entities/ground_sensor_equipped_entity.h>
 #include "crazyflie_camera_equipped_entity.h"
 #include "crazyflie_battery_equipped_entity.h"
 #include "crazyflie_proximity_equipped_entity.h"
+#include "crazyflie_ground_equipped_entity.h"
 
 namespace argos {
 
@@ -47,7 +49,8 @@ namespace argos {
       m_pcRABEquippedEntity(nullptr),
       m_pcPerspectiveCameraEquippedEntity(NULL),
       m_pcBatteryEquippedEntity(nullptr),
-      m_pcProximitySensorEquippedEntity(nullptr) {
+      m_pcProximitySensorEquippedEntity(nullptr),
+      m_pcGroundSensorEquippedEntity(nullptr) {
    }
 
    /****************************************/
@@ -70,7 +73,8 @@ namespace argos {
       m_pcRABEquippedEntity(nullptr),
       m_pcPerspectiveCameraEquippedEntity(nullptr),
       m_pcBatteryEquippedEntity(nullptr),
-      m_pcProximitySensorEquippedEntity(nullptr) {
+      m_pcProximitySensorEquippedEntity(nullptr),
+      m_pcGroundSensorEquippedEntity(nullptr) {
       try {
          /*
           * Create and init components
@@ -145,6 +149,20 @@ namespace argos {
             cDir.RotateZ(cAngle);
             m_pcProximitySensorEquippedEntity->AddSensor(cOff, cDir, PROXIMITY_SENSOR_RING_RANGE, m_pcEmbodiedEntity->GetOriginAnchor());
          }
+         /* Ground sensor equipped entity */
+         m_pcGroundSensorEquippedEntity =
+            new CCrazyflieGroundSensorEquippedEntity(this,
+                                            "ground_0");
+         AddComponent(*m_pcGroundSensorEquippedEntity);
+         m_pcGroundSensorEquippedEntity->AddSensor(CVector2(0.015f, -0.005f),
+                                                   CCrazyflieGroundSensorEquippedEntity::TYPE_GRAYSCALE,
+                                                   m_pcEmbodiedEntity->GetOriginAnchor());
+         m_pcGroundSensorEquippedEntity->AddSensor(CVector2(0.015f,  0.0f),
+                                                   CCrazyflieGroundSensorEquippedEntity::TYPE_GRAYSCALE,
+                                                   m_pcEmbodiedEntity->GetOriginAnchor());
+         m_pcGroundSensorEquippedEntity->AddSensor(CVector2(0.015f,  0.005f),
+                                                   CCrazyflieGroundSensorEquippedEntity::TYPE_GRAYSCALE,
+                                                   m_pcEmbodiedEntity->GetOriginAnchor());
          /* Controllable entity
             It must be the last one, for actuators/sensors to link to composing entities correctly */
          m_pcControllableEntity = new CControllableEntity(this, "controller_0");
@@ -247,6 +265,20 @@ namespace argos {
             cDir.RotateZ(cAngle);
             m_pcProximitySensorEquippedEntity->AddSensor(cOff, cDir, PROXIMITY_SENSOR_RING_RANGE, m_pcEmbodiedEntity->GetOriginAnchor());
          }
+         /* Ground sensor equipped entity */
+         m_pcGroundSensorEquippedEntity =
+            new CCrazyflieGroundSensorEquippedEntity(this,
+                                            "ground_0");
+         AddComponent(*m_pcGroundSensorEquippedEntity);
+         m_pcGroundSensorEquippedEntity->AddSensor(CVector2(0.015f, -0.005f),
+                                                   CCrazyflieGroundSensorEquippedEntity::TYPE_GRAYSCALE,
+                                                   m_pcEmbodiedEntity->GetOriginAnchor());
+         m_pcGroundSensorEquippedEntity->AddSensor(CVector2(0.015f,  0.0f),
+                                                   CCrazyflieGroundSensorEquippedEntity::TYPE_GRAYSCALE,
+                                                   m_pcEmbodiedEntity->GetOriginAnchor());
+         m_pcGroundSensorEquippedEntity->AddSensor(CVector2(0.015f,  0.005f),
+                                                   CCrazyflieGroundSensorEquippedEntity::TYPE_GRAYSCALE,
+                                                   m_pcEmbodiedEntity->GetOriginAnchor());
          /* Controllable entity
             It must be the last one, for actuators/sensors to link to composing entities correctly */
          m_pcControllableEntity = new CControllableEntity(this);
@@ -279,6 +311,7 @@ namespace argos {
       UPDATE(m_pcRABEquippedEntity);
       UPDATE(m_pcLEDEquippedEntity);
       UPDATE(m_pcBatteryEquippedEntity);
+      UPDATE(m_pcGroundSensorEquippedEntity);
    }
 
    /****************************************/
